@@ -3,7 +3,8 @@ module Ruboty
     module Actions
       class Yes < Ruboty::Actions::Base
         def call
-          message.reply("TODO: write a message.")
+          body = %w(そうだね そうだよ いいと思う いいね YES! その通り).sample
+          message.reply(body, from: message.robot.name)
         end
       end
     end
