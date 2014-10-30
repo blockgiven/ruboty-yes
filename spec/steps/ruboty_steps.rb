@@ -15,7 +15,7 @@ end
 
 step ':nameは:nameに次のいずれかで答える:' do |from, to, table|
   expect(@ruboty.said).to be_any {|message|
-    message.from == from && message.to == to && table.flatten.to_a.include?(message.body)
+    message.from == from && message.to == to && table.to_a.flatten.include?(message.body)
   }
 end
 
