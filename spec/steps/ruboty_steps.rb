@@ -9,8 +9,8 @@ step 'Rubotyの名前は:nameである' do |name|
   end
 end
 
-step ':nameが:nameに:bodyと発言した' do |from, to, body|
-  @ruboty.receive(from: from, to: to, body: body)
+step ':nameが:bodyと発言した' do |name, body|
+  @ruboty.receive(from: name, body: body)
 end
 
 step ':nameは:nameに次のいずれかで答える:' do |from, to, table|
