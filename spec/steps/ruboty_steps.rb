@@ -24,3 +24,7 @@ step ':nameは:bodyとは答えない' do |from, body|
     message.from == from && message.body.include?(body)
   }
 end
+
+step 'Rubotyは黙っている' do
+  expect(@ruboty.said).to be_empty
+end
