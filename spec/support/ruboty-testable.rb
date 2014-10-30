@@ -8,7 +8,7 @@ module Ruboty
 
   module Testable
     def say(message)
-      said << message
+      said << Message.new(message)
     end
 
     def said
