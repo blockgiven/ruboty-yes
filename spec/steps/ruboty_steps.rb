@@ -21,6 +21,6 @@ end
 
 step ':nameは:bodyとは答えない' do |from, body|
   expect(@ruboty.said).not_to be_any {|message|
-    message.from == name && message.body.include?(body)
+    message.from == from && message.body.include?(body)
   }
 end
